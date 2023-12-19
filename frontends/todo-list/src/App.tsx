@@ -1,22 +1,15 @@
 import './App.css'
-import CreateTaskButton from './components/TodoList/CreateTaskButton'
 import HeaderTitle from './components/HeaderTitle/HeaderTitle'
-import TodoForm from './components/TodoList/TodoForm'
-import { useState } from 'react'
+import TodoList from './components/TodoList/TodoList'
 
-
-function App() {
-  const name = useState("Ruan Cardozo");
-  console.log(name);
-  
+function App() {  
   return (
     <>
     <header>
       <HeaderTitle />
     </header>
     <body>
-      <CreateTaskButton/>
-      <TodoForm/>
+    <TodoList />
     </body>
     </>
   )
