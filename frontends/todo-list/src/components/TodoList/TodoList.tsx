@@ -1,18 +1,11 @@
 import { useState } from "react";
-
-type TaskListItem = {
-    id: number,
-    name: string,
-    isDone: boolean
-}
-
-type TaskList = TaskListItem[];
+import { TaskList, TaskListItem } from "./types";
 
 const initialTasks: TaskList = [
-    { id: 1, name: "Levar o cachorro para passear", isDone: true },
-    { id: 4, name: "Ir ao mercado e comprar XYZ", isDone: true},
-    { id: 2, name: "Levar o lixo para fora", isDone: true },
-    { id: 3, name: "Lavar louça", isDone: true}
+    { id: 1, name: "Levar o cachorro para passear", isDone: true, isEditing: false },
+    { id: 4, name: "Ir ao mercado e comprar XYZ", isDone: true, isEditing: false},
+    { id: 2, name: "Levar o lixo para fora", isDone: true, isEditing: false },
+    { id: 3, name: "Lavar louça", isDone: true, isEditing: false}
 ];
 
 function TodoList() {   
@@ -23,7 +16,8 @@ function TodoList() {
             const newItem: TaskListItem = {
                 id: tasks.length + 1,
                 name: "New Task",
-                isDone: false
+                isDone: false,
+                isEditing: true
             };
             tasks.push(newItem);
             setTasks([...tasks]);
