@@ -8,9 +8,7 @@ function App() {
     <header>
       <HeaderTitle />
     </header>
-    <body>
-    <TodoList />
-    </body>
+      <TodoList />
     </>
   )
 }
