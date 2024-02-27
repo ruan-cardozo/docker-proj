@@ -2,9 +2,9 @@ import { useState } from "react";
 import { TaskList, TaskListItem } from "./types";
 
 const initialTasks: TaskList = [
-    { id: 1, name: "Levar o cachorro para passear", isDone: true, isEditing: true },
-    { id: 2, name: "Levar o lixo para fora", isDone: true, isEditing: true },
-    { id: 3, name: "Lavar louça", isDone: true, isEditing: true}
+    { id: 1, name: "Levar o cachorro para passear", isDone: true, isEditing: false },
+    { id: 2, name: "Levar o lixo para fora", isDone: true, isEditing: false },
+    { id: 3, name: "Lavar louça", isDone: true, isEditing: false }
 ];
 
 function TodoList() {   
@@ -13,7 +13,7 @@ function TodoList() {
     return (
 
     <div>
-        <button style={{cursor: "pointer"}} type="button" onClick={() => {
+        <button style={{cursor: "pointer", float: "right", marginRight: "10px", marginTop: "-4em"}} type="button" onClick={() => {
 
             const newItem: TaskListItem = {
                 id: tasks.length + 1,

@@ -1,6 +1,6 @@
 function HeaderTitle() {
     return (
-        <h1 style={{textAlign: "left", marginLeft: "25px"}}> <strong> To do list </strong></h1>
+        <h1 style={{textAlign: "left", marginLeft: "25px", border: "solid" }}> <strong> To do list </strong> </h1>
     );
 }
 
