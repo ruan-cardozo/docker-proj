@@ -10,16 +10,3 @@ services:
       - 80:80
     volumes:
       - ./apache/vhosts:/usr/local/apache2/vhosts
-  
-  todolist:
-    image: node:alpine
-    container_name: todolist
-    entrypoint: /bin/sh
-    ports:
-      - 5173:5173
-    working_dir: /app
-    volumes:
-      - type: bind
-        source: ./
-        target: /app
-    tty: true
