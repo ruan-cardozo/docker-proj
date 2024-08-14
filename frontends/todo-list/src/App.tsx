@@ -5,9 +5,7 @@ import TodoList from './components/TodoList/TodoList'
 function App() {  
   return (
     <>
-    <header>
       <HeaderTitle />
-    </header>
       <TodoList />
     </>
   )

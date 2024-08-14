@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { TaskList, TaskListItem } from "./types";
+import './TodoList.css';
 
 const initialTasks: TaskList = [
     { id: 1, name: "Levar o cachorro para passear", isDone: true, isEditing: false },
@@ -13,7 +14,7 @@ function TodoList() {
     return (
 
     <div>
-        <button style={{cursor: "pointer", float: "right", marginRight: "10px", marginTop: "-4em"}} type="button" onClick={() => {
+        <button className="add-button" style={{}} type="button" onClick={() => {
 
             const newItem: TaskListItem = {
                 id: tasks.length + 1,

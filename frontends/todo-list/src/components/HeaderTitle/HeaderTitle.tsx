@@ -1,6 +1,11 @@
+import React from "react";
+import "./HeaderTitle.css";
+
 function HeaderTitle() {
     return (
-        <h1 style={{textAlign: "left", marginLeft: "25px", border: "solid" }}> <strong> To do list </strong> </h1>
+        <h1 className="header-nav">
+            <strong> TODO LIST </strong> 
+        </h1>    
     );
 }
 
